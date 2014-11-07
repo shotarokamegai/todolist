@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todolist</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!-- Templates -->
+  <script type="text/template" id='todo-template'>
+    <div class="item">
+		<p><%%= name %> <%%= quantity %>
+		<button data-action='destroy'>
+		  Delete
+		</button>
+    <%%= date %>
+    <input type="checkbox"　/>
+    <button data-action="edit">
+      Edit
+    </button></p>
+    <hr />
+    </div>
+  </script>
+  <script type="text/template" id="todo-edit-template">
+    <form>
+        <input class="name" type="text" placeholder="<%%= name %>"></input>
+        <textarea class="description" type="text" placeholder="<%%= description %>"></textarea>
+        <input class="date" id="datapicker" placeholder="<%%= date %>"></input>
+        <input class="quantity" type="text" placeholder="<%%= quantity %>"></input>
+    </form>
+    <button data-action="cancel">
+        Cancel
+    </button>
+  </script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
