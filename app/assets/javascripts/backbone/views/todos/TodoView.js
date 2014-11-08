@@ -58,15 +58,16 @@ Todoapp.Views.TodoView = Backbone.View.extend({
 	lineThroghItem: function(e){
 		e.preventDefault();
 		this.model.destroy();
-		this.$el.find('p').css('text-decoration', 'line-through');
+		this.$el.find('span.line').css('text-decoration', 'line-through');
 	},
 	hoverOn: function(){
-		this.$el.css("color", "#2ecc71");
+		this.$el.find('div.item').css('background', '#F7F7F7');
+		// this.$el.css("color", "#2ecc71");
 
 		return this;
 	},
 	hoverOff: function(){
-		this.$el.css("color", "#34495e");
+		this.$el.find('div.item').css('background', '#FFFFFF');
 
 		return this;
 	}

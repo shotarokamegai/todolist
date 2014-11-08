@@ -1,15 +1,17 @@
 var Todoapp = Todoapp || { Models: {}, Collections: {}, Views: {} };
-var collection;
+var itemCollection;
+var categoryCollection;
 
 Todoapp.initialize = function(){
-	collection = new Todoapp.Collections.TodoCollection();
+
+	itemCollection = new Todoapp.Collections.TodoCollection();
 
 	var todoListView = new Todoapp.Views.TodoListView({
-		collection: collection,
-		el: $('ul.list')
+		collection: itemCollection,
+		el: $('ul.itemlist')
 	});
 
-	collection.fetch();
+	itemCollection.fetch();
 
 	$('div.items').find('form').on('submit', function(e){
 		e.preventDefault();
@@ -21,8 +23,24 @@ Todoapp.initialize = function(){
 		$('textarea.description').val('');
 		$('input.quantity').val('');
 		$('input.date').val('');
-		collection.create({name: itemName, description: itemDescription, quantity: itemQuantity, date: itemDate })
+		itemCollection.create({name: itemName, description: itemDescription, quantity: itemQuantity, date: itemDate })
 	});
+
+	// categoryCollection = new Todoapp.Collections.CategoryCollection();
+
+	// var categoryListView = new Todoapp.Views.CategoryListView({
+	// 	collection: categoryCollection,
+	// 	el: $('ul.categorylist')
+	// });
+
+	// categoryCollection.fetch();
+
+	// $('input.category').on('submit', function(e){
+	// 	var categoryName = $('input.category').val();
+	// 	$('input.category').val('');
+	// 	categoryCollection.create({name: categoryName});
+	// });
+
 }
 
 $(function(){

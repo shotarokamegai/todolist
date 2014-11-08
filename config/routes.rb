@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root 'items#serve_html'
   resources :items, except: [:new, :edit]
+  resources :categories, except: [:new, :edit]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

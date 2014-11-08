@@ -7,16 +7,13 @@
   <!-- Templates -->
   <script type="text/template" id='todo-template'>
     <div class="item">
-		<p><%%= name %> <%%= quantity %>
-		<button data-action='destroy'>
-		  Delete
-		</button>
-    <%%= date %>
-    <input type="checkbox"　/>
+		<p><span class="line"><span style="margin-left: 2%; margin-right: 2em;"><input type="checkbox"/></span><span style="margin-right: 2em;"><%%= name %></span> <span style="margin-right: 2em;"><%%= date %></span></span>
+    <button data-action="destroy">
+      Delete
+    </button>
     <button data-action="edit">
       Edit
     </button></p>
-    <hr />
     </div>
   </script>
   <script type="text/template" id="todo-edit-template">
@@ -30,8 +27,14 @@
         Cancel
     </button>
   </script>
+  <script type="text/template" id='category-template'>
+    <div class="category">
+      <p><%%= name %></p>
+    </div>
+  </script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Maven+Pro' rel='stylesheet' type='text/css'>
 </head>
 <body>
 

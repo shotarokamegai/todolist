@@ -16,9 +16,43 @@
  */
 
  body {
- 	width: 100%;
+ 	font-family: 'Maven Pro', sans-serif;
  	text-align: center;
- 	font-family: 'Montserrat', sans-serif;
+	height: 100%;
+ }
+
+ hr {
+ 	color: rgba(0,0,0,.1);
+ 	margin: 0;
+ }
+
+ header {
+  	border-bottom: 1px solid rgba(0,0,0,.1);
+  	padding-top: 10px;
+ }
+
+ header h1 {
+ 	display: inline;
+ 	float: left;
+ 	font-family: 'Indie Flower', cursive;
+ 	margin: 0 0 0 3.5%;
+ }
+
+ nav {
+ 	float: right;
+ 	width: 70%;
+ }
+
+ nav ul {
+ 	float: left;
+ }
+
+ nav ul li {
+ 	float: left;
+ }
+
+ nav ul li:first-child {
+ 	margin-right: 34px;
  }
 
  p {
@@ -30,16 +64,84 @@
  }
 
  div.side {
+ 	height: 960px;
  	width: 29%;
  	float: left;
- 	border-right: 1px solid black;
  }
 
  div.main {
- 	width: 70%;
+ 	height: 960px;
+	width: 70.8%;
+ 	padding-left: 0;
  	float: right;
+ }
+
+ div.main ul {
+ 	margin: 0;
+ }
+
+ div.side {
+  	border-right: 1px solid rgba(0,0,0,.1);
+ }
+
+ div.side ul li h3.last {
+ 	border-bottom: 1px solid rgba(0,0,0,.1);
+ }
+
+ div ul {
+ 	margin-left: 0;
+ 	padding-left: 0;
  }
 
  div.item {
  	text-align: left;
+   	border-bottom: 1px solid rgba(0,0,0,.1);
  }
+
+ div.item p {
+ 	padding: 1% 0 1% 0;
+ }
+
+ div#ui-datepicker {
+
+ }
+
+ div.ui-datepicker {
+ 	background: #ffffff;
+  	/*border-bottom: 1px solid black;*/
+ }
+
+div.above {
+   	border-bottom: 1px solid rgba(0,0,0,.1);	
+}
+
+div.bottom {
+	margin-top: 18.720px;
+}
+
+ /**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}

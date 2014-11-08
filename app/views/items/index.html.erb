@@ -1,25 +1,41 @@
-<div class="main">
-	<h1>ToDoList<h1>
-	<div class="items">	
-		<form class="itemform">
-			<input class="item" placeholder="Add Item here"></input>
-			<textarea class="description" placeholder="Discription"></textarea>
-			<input class="date" id="datepicker" placeholder="Date"></input>
-			<input class="quantity" placeholder="Quantity"></input>
-			<button class="add-more" data-action="add">Add</button>
-		</form>
+<header class="cf">
+	<h1>Todo List :)</h1>
+	<nav>
+		<div class="items">
+		<ul>	
+			<li><form class="itemform">
+				<input class="item" placeholder="Add Item here"></input>
+				<textarea class="description" placeholder="Discription"></textarea>
+				<input class="date" id="datepicker" placeholder="Date"></input>
+				<input class="quantity" placeholder="Quantity"></input>
+				<button class="add-more" data-action="add">Add</button>
+			</form></li>
+			<li><form class="serachitem">
+				<input type="search" placeholder="Filter Task" />
+				<button class="toggle-add-form">Search</button>
+			</form></li>
+		</ul>		
+		</div>
+	</nav>
+</header>
+<div class="container">
+	<div class="main">
+		<ul class="itemlist"></ul>
 	</div>
-	<ul class="list"></ul>
-</div>
-<div class="side">
-<ul>
-	<li>All</li>
-	<li>Today</li>
-	--------------
-	<form class="categoryform">
-		<input class="catgory" placeholder="Add Category"></input>
-	</form>
-	<ul class="category">
-	</ul>	
-</ul>	
+	<div class="side">
+		<div class="above">
+			<ul>
+				<li><h3>All</h3></li>
+				<li><h3>Today</h3></li>
+			</ul>
+		</div>
+		<div class="bottom">
+			<h3>Categories</h3>
+			<form class="categoryform">
+				<input class="category" placeholder="Add Category"></input>
+			</form>
+			<ul class="categorylist">
+			</ul>	
+		</div>	
+	</div>
 </div>
