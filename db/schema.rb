@@ -22,10 +22,10 @@ ActiveRecord::Schema.define(version: 20141108074904) do
 
   create_table "items", force: true do |t|
     t.string   "name"
-    t.string   "description"
     t.integer  "quantity"
     t.string   "date"
     t.boolean  "status"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

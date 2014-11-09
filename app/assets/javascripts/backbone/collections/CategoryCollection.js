@@ -1,6 +1,6 @@
 var Todoapp = Todoapp || { Models: {}, Collections: {}, Views: {} };
 
-Todoapp.Collections.TodoCollection = Backbone.Collection.extend({
-	model: Todoapp.Models.TodoItem,
-	url: '/items'
+Todoapp.Collections.CategoryCollection = Backbone.Collection.extend({
+	model: Todoapp.Models.CategoryModel,
+	url: '/categories'
 });

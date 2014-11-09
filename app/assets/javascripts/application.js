@@ -22,6 +22,12 @@
 
 //= require ./backbone/app
 //= require ./backbone/models/Todo
+//= require ./backbone/models/Category
 //= require ./backbone/collections/TodoCollection
+//= require ./backbone/collections/CategoryCollection
 //= require ./backbone/views/todos/TodoView
 //= require ./backbone/views/todos/TodoListView
+//= require ./backbone/views/categories/CategoryView
+//= require ./backbone/views/categories/CategoryListView
+//= require ./backbone/views/categories/CategoryDropboxView
+//= require ./backbone/views/categories/CategoryDropboxListView

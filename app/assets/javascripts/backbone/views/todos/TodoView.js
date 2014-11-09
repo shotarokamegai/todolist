@@ -24,6 +24,7 @@ Todoapp.Views.TodoView = Backbone.View.extend({
 	destroyItem: function(e){
 		e.preventDefault();
 		this.model.destroy();
+		this.$el.remove();
 	},
 	renderEditForm: function(){
 		var self = this;

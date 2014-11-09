@@ -23,7 +23,8 @@ class ItemsController < ApplicationController
 	end
 
 	def create
-		item = Item.create(item_params)
+		category = Category.find_by(name: params[:category])
+		item = Item.create({name: params[:name], quantity: params[:quantity], date: params[:date], category_id: category.id })
 		respond_with item
 	end
 

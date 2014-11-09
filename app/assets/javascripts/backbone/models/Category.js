@@ -1,8 +1,8 @@
 var Todoapp = Todoapp || { Models: {}, Collections: {}, Views: {} };
 
-Todoapp.Models.TodoItem = Backbone.Model.extend({
+Todoapp.Models.CategoryModel = Backbone.Model.extend({
 	initialize: function(){
-		console.log('Added New Item!');
+		console.log('Added New Category!');
 	},
 
 	defaults: {
