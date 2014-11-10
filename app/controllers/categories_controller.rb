@@ -18,7 +18,10 @@ class CategoriesController < ApplicationController
 
 	def create
 		category = Category.create(name: params[:name])
-		respond_with category
+		categories = Category.all
+		respond_to do |format|
+			format.json { render :json => categories }
+		end
 	end
 
 	def destroy
@@ -32,6 +35,21 @@ class CategoriesController < ApplicationController
 		category.update(name: params[:name])
 		respond_with category
 	end
+
+	def get
+		items = Item.where(category_id: params[:category_id])
+		respond_to do |format|
+			format.json { render :json => items }
+		end
+	end
+
+	# def id
+	# 	item = Item.find_by(name: params[:name])
+	# 	item_id = item.id
+	# 	respond_to do |format|
+	# 		format.json { render :json => item_id }
+	# 	end
+	# end
 
 	private
 

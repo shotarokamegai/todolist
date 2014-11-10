@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   root 'items#serve_html'
+  post '/category' => 'categories#get'
+  get '/category/find' => 'categories#id'
   resources :items, except: [:new, :edit]
   resources :categories, except: [:new, :edit]
   # The priority is based upon order of creation: first created -> highest priority.

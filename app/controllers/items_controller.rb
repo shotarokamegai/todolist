@@ -24,7 +24,11 @@ class ItemsController < ApplicationController
 
 	def create
 		category = Category.find_by(name: params[:category])
-		item = Item.create({name: params[:name], quantity: params[:quantity], date: params[:date], category_id: category.id })
+		if category == nil
+			item = Item.create({name: params[:name], quantity: params[:quantity], date: params[:date], done: params[:status], category_id: nil })
+		else
+			item = Item.create({name: params[:name], quantity: params[:quantity], date: params[:date], done: params[:status], category_id: category.id })
+		end
 		respond_with item
 	end
 
@@ -37,14 +41,13 @@ class ItemsController < ApplicationController
 	def update
 		item = Item.find(params[:id])
 		item.update(item_params)
-		binding.pry
 		respond_with item
 	end
 
 	private
 
 	def item_params
-		params.require(:item).permit(:name, :description, :date, :quantity)
+		params.require(:item).permit(:name, :done, :category_id, :date, :quantity)
 	end
 
 end

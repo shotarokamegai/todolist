@@ -2,7 +2,7 @@ var Todoapp = Todoapp || { Models: {}, Collections: {}, Views: {} };
 
 Todoapp.Views.CategoryListView = Backbone.View.extend({
 	initialize: function(){
-		this.listenTo(this.collection, 'add', this.render);
+		// this.listenTo(this.collection, 'add', this.render);
 	},
 	render: function(){
 		var self = this;

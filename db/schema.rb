@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20141108074904) do
     t.string   "name"
     t.integer  "quantity"
     t.string   "date"
-    t.boolean  "status"
+    t.boolean  "done"
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"

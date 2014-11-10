@@ -14,10 +14,10 @@
 				</label>
 				<button class="add-more" data-action="add">Add</button>
 			</form></li>
-			<li><form class="serachitem">
-				<input type="type" placeholder="Filter Task" />
-				<button class="toggle-add-form">Search</button>
-			</form></li>
+<!-- 			<li><form class="searchitem">
+				<input class="filter" type="type" placeholder="Filter Task" />
+				<button class="search">Search</button>
+			</form></li> -->
 		</ul>		
 		</div>
 	</nav>
@@ -29,8 +29,10 @@
 	<div class="side">
 		<div class="above">
 			<ul>
-				<li><h3>All</h3></li>
-				<li><h3>Today</h3></li>
+				<li><h3 class="option" id="all">All</h3></li>
+				<li><h3 class="option" id="today">Today</h3></li>
+				<li><h3 class="option" id="done">Done</h3></li>
+				<li><h3 class="option" id="pending">Pending</h3></li>
 			</ul>
 		</div>
 		<div class="bottom">

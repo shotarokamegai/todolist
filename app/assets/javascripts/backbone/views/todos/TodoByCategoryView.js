@@ -1,8 +1,8 @@
 var Todoapp = Todoapp || { Models: {}, Collections: {}, Views: {} };
 
-Todoapp.Views.TodoView = Backbone.View.extend({
+Todoapp.Views.TodoByCategoryView = Backbone.View.extend({
 	initialize: function(){
-		this.listenTo( this.model, "change", this.render );
+		// this.listenTo( this.model, "change", this.render );
 		// this.listenTo( this.model, "destroy", this.remove );
 	},
 	tagName: 'li',
@@ -21,19 +21,6 @@ Todoapp.Views.TodoView = Backbone.View.extend({
 
 		return this
 	},
-	// renderAll: function(){
-	// 	this.$el.empty();
-	// 	this.$el.html(this.template( this.model.attributes ));
-	// 	console.log('Hi!');
-	// 	var itemCollection = new Todoapp.Collections.TodoCollection();
-
-	// 	var todoListView = new Todoapp.Views.TodoListView({
-	// 		collection: itemCollection,
-	// 		el: $('ul.itemlist')
-	// 	});
-
-	// 	return this
-	// },
 	destroyItem: function(e){
 		e.preventDefault();
 		this.model.destroy();
@@ -47,6 +34,8 @@ Todoapp.Views.TodoView = Backbone.View.extend({
 			e.preventDefault();
 			var nameField = self.$el.find('input.name');
 			var newName = nameField.val();
+			var descriptionField = self.$el.find('input.description');
+			var newDescription = descriptionField.val();
 			var dateField = self.$el.find('input.date');
 			var newDate = dateField.val();
 			var quantityField = self.$el.find('input.quantity');
@@ -65,12 +54,13 @@ Todoapp.Views.TodoView = Backbone.View.extend({
 	},
 	lineThroghItem: function(e){
 		e.preventDefault();
-		this.model.set('done', true);
+		this.model.set('status', true);
 		this.model.save();
 		this.$el.find('span.line').css('text-decoration', 'line-through');
 	},
 	hoverOn: function(){
 		this.$el.find('div.item').css('background', '#F7F7F7');
+		// this.$el.css("color", "#2ecc71");
 
 		return this;
 	},

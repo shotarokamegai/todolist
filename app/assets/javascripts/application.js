@@ -18,7 +18,6 @@
 
 //= require ./libraries/underscore
 //= require ./libraries/backbone
-//= require ./libraries/prettyCheckable.min
 
 //= require ./backbone/app
 //= require ./backbone/models/Todo
@@ -27,6 +26,8 @@
 //= require ./backbone/collections/CategoryCollection
 //= require ./backbone/views/todos/TodoView
 //= require ./backbone/views/todos/TodoListView
+//= require ./backbone/views/todos/TodoByCategoryView
+//= require ./backbone/views/todos/TodoByCategoryListView
 //= require ./backbone/views/categories/CategoryView
 //= require ./backbone/views/categories/CategoryListView
 //= require ./backbone/views/categories/CategoryDropboxView

@@ -7,14 +7,22 @@
   <!-- Templates -->
   <script type="text/template" id='todo-template'>
     <div class="item">
-		<p><span class="line"><span style="margin-left: 2%; margin-right: 2em;"><input type="checkbox"/></span><span style="margin-right: 2em;"><%%= name %></span> <span style="margin-right: 2em;"><%%= date %></span></span>
-    <button data-action="destroy">
-      Delete
-    </button>
-    <button data-action="edit">
-      Edit
-    </button></p>
-    </div>
+    <%% if (done == true) { %>
+  		<p><span class="line" style="text-decoration: line-through;"><span style="margin-left: 2%; margin-right: 2em;"><input class="checkbox" type="checkbox"/></span><span style="margin-right: 2em;"><%%= name %></span> <span style="margin-right: 2em;"><%%= date %></span></span>
+      <button data-action="destroy">
+        Delete
+      </button></p>
+      </div>
+    <%% } else { %>
+      <p><span class="line"><span style="margin-left: 2%; margin-right: 2em;"><input type="checkbox"/></span><span style="margin-right: 2em;"><%%= name %></span> <span style="margin-right: 2em;"><%%= date %></span></span>
+      <button data-action="destroy">
+        Delete
+      </button>
+      <button data-action="edit">
+        Edit
+      </button></p>
+      </div>
+    <%% }; %>   
   </script>
   <script type="text/template" id="todo-edit-template">
     <form>
@@ -28,7 +36,7 @@
     </button>
   </script>
   <script type="text/template" id='category-template'>
-      <h4 class="category"><%%= name %></h4>
+      <h4 class="category"><%%= name %><span class="deletecategory" style="float: right;">&#10006;</span><input type="hidden" value="<%%= id %>"></h4>
   </script>
   <script type="text/template" id='category-dropbox-template'>
       <%%= name %>
