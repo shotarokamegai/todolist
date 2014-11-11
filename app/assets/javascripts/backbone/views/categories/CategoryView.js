@@ -5,6 +5,7 @@ Todoapp.Views.CategoryView = Backbone.View.extend({
 		this.listenTo( this.model, "change", this.render );
 	},
 	tagName: 'li',
+	className: 'ui-state-default',
 	template: _.template( $('#category-template').html() ),
 	events: {
 		'click [data-action="edit"]' : 'renderEditForm',

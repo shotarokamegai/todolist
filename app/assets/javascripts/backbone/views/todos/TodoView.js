@@ -6,6 +6,7 @@ Todoapp.Views.TodoView = Backbone.View.extend({
 		// this.listenTo( this.model, "destroy", this.remove );
 	},
 	tagName: 'li',
+	className: 'ui-state-default',
 	editTemplate: _.template( $('#todo-edit-template').html() ),
 	template: _.template( $('#todo-template').html() ),
 	events: {
