@@ -21,12 +21,28 @@
 	height: 100%;
  }
 
+ div.login h1 {
+  font-family: 'Indie Flower', cursive;
+  font-size: 4em;
+   margin-bottom: 0;
+ }
+
+ div.login h2 {
+  font-family: 'Indie Flower', cursive;
+  font-size: 2.5em;
+  margin-top: 10px;
+ }
+
  h1 a {
   text-decoration: none;
  }
 
  h3.option, h4, button, input.checkbox {
     cursor: pointer;
+ }
+
+ h3.option.on {
+  background: #F7F7F7;
  }
 
  h3.option:hover {
@@ -55,6 +71,7 @@
   border-radius: 1px;
   height: 20px;
  }
+
  .search input[type=search] {
   font-family: 'Maven Pro', sans-serif;
   border-radius: 1px;
@@ -82,6 +99,11 @@
  	float: left;
  	font-family: 'Indie Flower', cursive;
  	margin: 0 0 0 3.5%;
+ }
+ 
+ header h2.welcome {
+  display: inline;
+  font-family: 'Indie Flower', cursive;
  }
 
  nav {

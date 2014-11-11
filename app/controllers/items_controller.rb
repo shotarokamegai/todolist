@@ -18,16 +18,17 @@ class ItemsController < ApplicationController
 	end
 
 	def index
-		items = Item.all
+		user = User.find(session[:user_id])
+		items = user.items
 		respond_with items
 	end
 
 	def create
 		category = Category.find_by(name: params[:category])
 		if category == nil
-			item = Item.create({name: params[:name], quantity: params[:quantity], date: params[:date], done: params[:status], category_id: nil })
+			item = Item.create({name: params[:name], quantity: params[:quantity], date: params[:date], done: params[:status], user_id: session[:user_id], category_id: nil })
 		else
-			item = Item.create({name: params[:name], quantity: params[:quantity], date: params[:date], done: params[:status], category_id: category.id })
+			item = Item.create({name: params[:name], quantity: params[:quantity], date: params[:date], done: params[:status], user_id: session[:user_id],  category_id: category.id })
 		end
 		respond_with item
 	end

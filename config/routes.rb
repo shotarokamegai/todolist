@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
-
-  root 'items#serve_html'
+  
+  
+  get '/' => 'session#index'
+  post '/' => 'session#create'
+  delete '/login' => 'session#destroy'
+  get '/signup' => 'session#signup'
+  get '/users/:id' => 'items#serve_html'
   post '/category' => 'categories#get'
   get '/category/find' => 'categories#id'
+  resources :session
+  resources :users
   resources :items, except: [:new, :edit]
   resources :categories, except: [:new, :edit]
   # The priority is based upon order of creation: first created -> highest priority.

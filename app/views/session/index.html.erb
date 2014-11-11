@@ -1,0 +1,21 @@
+<body style="padding-top: 3%;">
+<div class="login">
+<h1> Todo List :) </h1>
+<h2>Log in</h2>
+	<% if @error %>
+		<p style='color: red;'>Incorrect Username/Password</p>
+	<% end %>
+	<form action="/" method="POST" style="display: inline;">
+		<p>Username</p>
+		<input name="name" style="margin-bottom: 2%;"><br />
+		<p>Password</p>
+		<input name="password" type="password" style="margin-bottom: 2%;"><br />
+		<input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+		<button id="sign-in">Log In</button>
+	</form>
+	<form action="/signup" method="GET" style="display: inline;">
+		<button id="create-account">Create Account</button>
+	</form>
+	<br /><br />
+</div>
+</body>

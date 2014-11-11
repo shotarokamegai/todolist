@@ -6,6 +6,7 @@ class CreateItems < ActiveRecord::Migration
     	t.string :date
     	t.boolean :done
         t.integer :category_id
+        t.integer :user_id
     	t.timestamps
     end
   end

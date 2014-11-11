@@ -12,13 +12,15 @@ class CategoriesController < ApplicationController
 	respond_to :json
 
 	def index
-		categories = Category.all
+		user = User.find(session[:user_id])
+		categories = user.categories
 		respond_with categories
 	end
 
 	def create
-		category = Category.create(name: params[:name])
-		categories = Category.all
+		user = User.find(session[:user_id])
+		category = Category.create(name: params[:name], user_id: session[:user_id])
+		categories = user.categories
 		respond_to do |format|
 			format.json { render :json => categories }
 		end
@@ -30,11 +32,11 @@ class CategoriesController < ApplicationController
 		respond_with category
 	end
 
-	def update
-		category = Item.find(params[:id])
-		category.update(name: params[:name])
-		respond_with category
-	end
+	# def update
+	# 	category = Item.find(params[:id])
+	# 	category.update(name: params[:name])
+	# 	respond_with category
+	# end
 
 	def get
 		items = Item.where(category_id: params[:category_id])

@@ -1,0 +1,15 @@
+<body style="padding-top: 3%;">
+<div class="login">
+<h1>Todo List :)</h1>
+<h2>Sign Up</h2>
+	<form action="/users" method="POST" style="display: inline;">
+		<p>Username</p>
+		<input name="name" style="margin-bottom: 2%;"><br />
+		<p>Password</p>
+		<input name="password" style="margin-bottom: 2%;"><br />
+		<input name="authenticity_token" value="<%= form_authenticity_token() %>" type="hidden">
+		<button id="sign-in">Submit</button>
+	</form>
+<p style="margin-top: 2%;"><a href="/">Go Back to Login Page</a></p>
+</div>
+</body>
