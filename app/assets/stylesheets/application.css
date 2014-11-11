@@ -16,9 +16,9 @@
  */
 
  body {
- 	font-family: 'Maven Pro', sans-serif;
- 	text-align: center;
-	height: 100%;
+  font-family: 'Maven Pro', sans-serif;
+  text-align: center;
+  height: 100%;
  }
 
  div.login h1 {
@@ -62,8 +62,8 @@
  }
 
  hr {
- 	color: rgba(0,0,0,.1);
- 	margin: 0;
+  color: rgba(0,0,0,.1);
+  margin: 0;
  }
 
  input {
@@ -110,68 +110,76 @@
  }
 
  nav {
- 	float: right;
- 	width: 64%;
+  float: right;
+  width: 64%;
   margin-bottom: 1%;
  }
 
  nav ul {
- 	float: left;
+  float: left;
  }
 
  nav ul li {
- 	float: left;
+  float: left;
  }
 
  nav ul li:first-child {
- 	margin-right: 34px;
+  margin-right: 34px;
  }
 
  p {
- 	margin: 0;
+  margin: 0;
  }
 
  li {
- 	list-style: none;
+  list-style: none;
  }
 
  div.side {
- 	height: 960px;
- 	width: 29%;
- 	float: left;
+  height: 960px;
+  width: 29%;
+  float: left;
  }
 
  div.main {
- 	height: 960px;
-	width: 70.8%;
- 	padding-left: 0;
- 	float: right;
+  height: 960px;
+  width: 70.8%;
+  padding-left: 0;
+  float: right;
  }
 
  div.main ul {
- 	margin: 0;
+  margin: 0;
  }
 
  div.side {
-  	border-right: 1px solid rgba(0,0,0,.1);
+    border-right: 1px solid rgba(0,0,0,.1);
  }
 
  div.side ul li h3.last {
- 	border-bottom: 1px solid rgba(0,0,0,.1);
+  border-bottom: 1px solid rgba(0,0,0,.1);
  }
 
  div ul {
- 	margin-left: 0;
- 	padding-left: 0;
+  margin-left: 0;
+  padding-left: 0;
  }
 
  div.item {
- 	text-align: left;
-   	border-bottom: 1px solid rgba(0,0,0,.1);
+  text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,.1);
  }
 
  div.item p {
- 	padding: 1% 0 1% 0;
+  padding: 1% 0 1% 0;
+ }
+
+ div.items ul {
+  width: 100%;
+ }
+
+ div.items li#welcome {
+  margin-left: 7%;
  }
 
  div#ui-datepicker {
@@ -179,16 +187,16 @@
  }
 
  div.ui-datepicker {
- 	background: #ffffff;
-  	/*border-bottom: 1px solid black;*/
+  background: #ffffff;
+    /*border-bottom: 1px solid black;*/
  }
 
 div.above {
-   	border-bottom: 1px solid rgba(0,0,0,.1);	
+    border-bottom: 1px solid rgba(0,0,0,.1);  
 }
 
 div.bottom {
-	margin-top: 18.720px;
+  margin-top: 18.720px;
 }
 
 /***** Select Box *****/

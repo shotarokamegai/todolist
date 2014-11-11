@@ -14,7 +14,7 @@
 				</label>
 				<button class="add-more" data-action="add">Add</button>
 			</form></li>
-				<li><h2 class="welcome">Welcome <%= User.find(session[:user_id]).name %></h2></li>
+				<li id="welcome"><h2 class="welcome">Welcome <%= User.find(session[:user_id]).name %></h2></li>
 <!-- 			<li><form class="searchitem">
 				<input class="filter" type="type" placeholder="Filter Task" />
 				<button class="search">Search</button>
