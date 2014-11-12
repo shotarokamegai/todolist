@@ -63,7 +63,16 @@ Todoapp.Views.CategoryView = Backbone.View.extend({
 	},
 	destroyCategory: function(){
 		this.model.destroy();
-		this.$el.remove();
+		var name = this.$el.find('h4').text();
+		name = name.substring(0, name.length - 1);
+		$('option').each(function(){
+			var text = $(this).text().replace(/^\s+|\s+$/g, "");
+			if (text == name) {
+				$(this).remove();
+			};
+		});
+		this.$el.find('h4').remove();
+
 	},
 	hoverOn: function(){
 		this.$el.find('div.item').css('background', '#F7F7F7');

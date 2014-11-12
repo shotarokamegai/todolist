@@ -38,7 +38,7 @@ Todoapp.initialize = function(){
 		collection: categoryCollection,
 		el: $('ul.categorylist')
 	});
-
+	// categoryCollection.fetch();
 	categoryCollection.fetch({success: function(e){
 		$(e.models).each(function(){
 			var categoryView = new Todoapp.Views.CategoryView({
@@ -66,6 +66,7 @@ Todoapp.initialize = function(){
 		$('ul.categorylist').children().remove();
 		var categoryName = $('input.category').val();
 		$('input.category').val('');
+		// categoryCollection.create({name: categoryName});
 		categoryCollection.create({name: categoryName}, {success: function(e){
 			categoryCollection.fetch({success: function(e){
 				$(e.models).each(function(){

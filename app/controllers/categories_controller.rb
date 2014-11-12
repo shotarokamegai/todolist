@@ -20,10 +20,11 @@ class CategoriesController < ApplicationController
 	def create
 		user = User.find(session[:user_id])
 		category = Category.create(name: params[:name], user_id: session[:user_id])
-		categories = user.categories
-		respond_to do |format|
-			format.json { render :json => categories }
-		end
+		# categories = user.categories
+		# respond_to do |format|
+		# 	format.json { render :json => categories }
+		# end
+		respond_with category
 	end
 
 	def destroy
