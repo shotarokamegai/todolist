@@ -8,7 +8,7 @@
   <script type="text/template" id='todo-template'>
     <div class="item">
     <%% if (done == true) { %>
-  		<p><span class="line" style="text-decoration: line-through;"><span style="margin-left: 2%; margin-right: 2em;"><input class="checkbox" type="checkbox"/></span><span style="margin-right: 2em;"><%%= name %></span> <span style="margin-right: 2em;"><%%= date %></span></span>
+  		<p><span class="line" style="text-decoration: line-through;"><span style="margin-left: 2%; margin-right: 2em;"><input class="checkbox" type="checkbox"/></span><span style="margin-right: 2em;"><%%= name %></span> <span style="margin-right: 2em;"><%%= date %> <%%= quantity %></span></span>
       <button data-action="destroy">
         Delete
       </button></p>
